@@ -50,11 +50,11 @@ read -r -d '' PAYLOAD <<EOF
   "productType": "INTRADAY",
   "orderType": "LIMIT",
   "securityId": "$SECURITY_ID",
-  "quantity": 100,
+  "quantity": 225,
   "price": $PRICE,
   "targetPrice": $TARGET_PRICE,
   "stopLossPrice": $STOPLOSS_PRICE,
-  "trailingJump": 0
+  "trailingJump": 10
 }
 EOF
 
