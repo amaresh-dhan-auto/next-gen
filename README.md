@@ -1,7 +1,7 @@
-# NEXT-GEN Dhan Trading Automation
+# NEXT-GEN Automation
 
 
-Manual GitHub Actions workflows to run Dhan scripts.
+Manual GitHub Actions workflows to run scripts.
 
 
 ## Usage
@@ -20,4 +20,4 @@ Manual GitHub Actions workflows to run Dhan scripts.
 
 ### Required GitHub Secrets
 - `ACCESS_TOKEN`
-- `DHAN_CLIENT_ID
+- `CLIENT_ID
