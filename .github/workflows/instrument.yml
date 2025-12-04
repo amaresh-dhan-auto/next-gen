@@ -1,0 +1,17 @@
+name: Run Instrument Script
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-instrument:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make instrument.sh executable
+        run: chmod +x instrument.sh
+
+      - name: Run instrument script
+        run: ./instrument.sh
