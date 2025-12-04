@@ -4,7 +4,7 @@
 START_TIME_EPOCH=$(date +%s)
 START_TIME_FMT=$(date +"%d-%m-%Y %I:%M:%S %p")
 
-FILE="api-scrip-master.csv"
+FILE="./api-scrip-master.csv"
 ACCESS_TOKEN=""
 DHAN_CLIENT_ID=""
 OPTION_TEMPLATE="NIFTY 09 DEC"   # Fixed template
