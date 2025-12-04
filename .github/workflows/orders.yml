@@ -1,0 +1,36 @@
+name: Run Order Script
+
+on:
+  workflow_dispatch:
+    inputs:
+      strike:
+        description: "Strike Price"
+        required: true
+        type: string
+      optionType:
+        description: "CE or PE"
+        required: true
+        type: string
+      price:
+        description: "Entry Price"
+        required: true
+        type: string
+
+jobs:
+  run-order:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make order.sh executable
+        run: chmod +x order.sh
+
+      - name: Run order script
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          DHAN_CLIENT_ID: ${{ secrets.DHAN_CLIENT_ID }}
+        run: |
+          ./order.sh "${{ github.event.inputs.strike }}" \
+                      "${{ github.event.inputs.optionType }}" \
+                      "${{ github.event.inputs.price }}"
